@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# DockerのDBデータ
+back/laravel-app/postgre_DB/
+
+# Node.js
+node_modules/
+dist/
+
+# PHP/Laravel
+back/laravel-app/vendor/
+back/laravel-app/.env
