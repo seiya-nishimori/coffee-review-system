@@ -9,4 +9,10 @@ RUN apt-get update \
     && apt-get install -y zip libpq-dev \
     && docker-php-ext-install pdo_pgsql pgsql
 
-    
+    #以下の内容を追記
+COPY . .
+WORKDIR /api/laravel-app
+RUN composer install
+CMD ["php", "artisan", "serve", "--host", "0.0.0.0"]
+EXPOSE 8000
+
